@@ -1,10 +1,14 @@
+const path = require('path')
+
+require('dotenv').config({ path:'../.env'  });
+
 const handleJokeFetch = async () => {
  try {
     const response = await fetch('https://api.api-ninjas.com/v1/jokes', {
         method: 'GET', 
         headers: { 
          // Insert your API key here. 
-            'X-API-Key':'',
+            'X-API-Key': process.env.API_KEY,
             'contentType' :'application/json'
          }
     })

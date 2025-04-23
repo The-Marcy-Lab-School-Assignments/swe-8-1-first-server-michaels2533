@@ -7,7 +7,6 @@ const port = 8080;
 
 app.listen(port);
 
-
 // Static Assets filepath 
 const filepath = path.join(__dirname, '../vite-project/dist')
 
@@ -33,7 +32,6 @@ const servePicture = (req,res,next) => {
 
 const serveJoke = (req,res,next) => {
     console.log("You reached the joke endpoint");
-
     // Fetches a random joke via the Jokes AP - API Ninjas. 
     const fetchJoke = async () => {
     const jokeData = await handleJokeFetch(); 
